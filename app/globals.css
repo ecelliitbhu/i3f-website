@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-brand-primary: #4c1d95;
@@ -16,6 +15,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #020617;
+    --color-foreground: #f8fafc;
+    --color-brand-primary: #8b5cf6;
+    /* Lighter purple for dark mode */
+  }
+}
 
 :root {
   --background: var(--color-background);
