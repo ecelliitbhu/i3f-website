@@ -22,7 +22,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
 
           <Link
-            href="/about"
+            href="/#about"
             className="hover:text-brand-primary transition-colors"
           >
             About I3F
@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/startups"
+            href="/#units"
             className="hover:text-brand-primary transition-colors"
           >
             Portfolio
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <Link
-            href="/apply"
+            href="/incubation/how-to-join"
             className="px-4 py-2 rounded-md bg-brand-primary hover:bg-brand-secondary text-white text-sm font-medium transition-colors shadow-sm"
           >
             Apply Now

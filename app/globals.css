@@ -2,9 +2,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-brand-primary: #211D70;
-  /* BHU Official Blue */
-  --color-brand-secondary: #3b35a8;
+  --color-brand-primary: #0b3c6b;
+  /* True IIT BHU Navy Blue */
+  --color-brand-secondary: #1a5694;
   /* Lighter BHU Blue for hovers */
   --color-brand-accent: #F15A22;
   /* BHU Official Saffron/Orange */
