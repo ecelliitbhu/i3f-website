@@ -2,11 +2,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-brand-primary: #711b3d;
-  /* True IIT BHU Maroon/Purple */
-  --color-brand-secondary: #8b264d;
-  /* Lighter Maroon for hovers */
-  --color-brand-accent: #F15A22;
+  --color-brand-primary: #4c1d95;
+  /* Deep Purple */
+  --color-brand-secondary: #5b21b6;
+  /* Slightly lighter deep purple */
+  --color-brand-accent: #fbbf24;
   /* BHU Official Saffron/Orange */
 
   --color-background: #ffffff;
