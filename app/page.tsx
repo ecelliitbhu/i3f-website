@@ -150,6 +150,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* LEADERSHIP SECTION */}
+      <section id="leadership" className="py-24 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="w-8 h-1 bg-brand-accent"></div>
+              <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Governance & Leadership</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Guided by Visionaries</h2>
+            <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              A seven-member Managing Committee, comprising the Director and senior faculty, monitors innovation and entrepreneurship activity across I3F on an ongoing basis.
+            </p>
+          </div>
+
+          {/* Organizational Flow Diagram */}
+          <div className="max-w-4xl mx-auto mb-20 bg-slate-50 p-8 rounded-2xl border border-slate-200">
+            <h3 className="text-center font-bold text-brand-primary mb-8 uppercase tracking-widest text-sm">Organizational Structure</h3>
+            <div className="flex flex-col md:flex-row items-center justify-between text-center gap-4">
+              <div className="flex-1 bg-white p-4 border border-slate-200 shadow-sm rounded-lg w-full">
+                <div className="font-bold text-slate-900">Chairman</div>
+                <div className="text-xs text-slate-500 mt-1">Director, IIT (BHU)</div>
+              </div>
+              <div className="hidden md:block text-brand-accent text-2xl">&rarr;</div>
+              <div className="md:hidden text-brand-accent text-2xl">&darr;</div>
+              <div className="flex-1 bg-white p-4 border border-slate-200 shadow-sm rounded-lg w-full">
+                <div className="font-bold text-slate-900">Board of Directors</div>
+                <div className="text-xs text-slate-500 mt-1">Founding Directors, I3F</div>
+              </div>
+              <div className="hidden md:block text-brand-accent text-2xl">&rarr;</div>
+              <div className="md:hidden text-brand-accent text-2xl">&darr;</div>
+              <div className="flex-1 bg-white p-4 border border-slate-200 shadow-sm rounded-lg w-full">
+                <div className="font-bold text-slate-900">Mentors & Experts</div>
+                <div className="text-xs text-slate-500 mt-1">Domain Specialists</div>
+              </div>
+              <div className="hidden md:block text-brand-accent text-2xl">&rarr;</div>
+              <div className="md:hidden text-brand-accent text-2xl">&darr;</div>
+              <div className="flex-1 bg-brand-primary p-4 border border-brand-primary shadow-sm rounded-lg w-full text-white">
+                <div className="font-bold">Incubatees</div>
+                <div className="text-xs text-white/70 mt-1">Startup Founders</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Leadership Profiles */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { name: "Prof. Amit Patra", role: "Director, IIT (BHU) Varanasi" },
+              { name: "Prof. Rajnesh Tyagi", role: "Department of Mechanical Engineering, IIT (BHU) Varanasi" },
+              { name: "Prof. Rajesh Kumar Upadhyay", role: "Department of Chemical Engineering, IIT (BHU) Varanasi" },
+              { name: "Prof. Manoj Kumar Meshram", role: "Department of Electronics Engineering, IIT (BHU) Varanasi" },
+            ].map((leader, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-32 h-32 mx-auto bg-slate-100 rounded-full mb-6 border-4 border-white shadow-lg overflow-hidden relative">
+                  <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors"></div>
+                  {/* Placeholder for Photo */}
+                  <div className="w-full h-full flex items-center justify-center text-slate-300">
+                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                  </div>
+                </div>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{leader.name}</h3>
+                <p className="text-sm text-slate-500">{leader.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Teammate's Component - Refactored for Gov Aesthetic */}
       <PortfolioEcosystem />
       
@@ -350,6 +417,51 @@ export default function Home() {
               <div className="text-xs font-bold uppercase tracking-widest text-white/80">{ach.label}</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    {/* WIDER ECOSYSTEM */}
+    <section id="ecosystem" className="py-24 bg-white border-b border-slate-200">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="mb-16">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <div className="w-8 h-1 bg-brand-accent"></div>
+            <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Wider Network</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Wider Entrepreneurial Ecosystem at IIT (BHU)</h2>
+          <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            I3F works in close coordination with the broader ecosystem at IIT (BHU) to provide startups with unparalleled access to research, alumni networks, and cross-disciplinary expertise.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* I-DAPT Hub */}
+          <div className="bg-slate-50 p-8 border border-slate-200 hover:shadow-lg transition-shadow relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <h3 className="text-xl font-bold text-slate-900 mb-4 relative z-10">I-DAPT Hub Foundation</h3>
+            <p className="text-slate-600 leading-relaxed text-sm relative z-10">
+              A Section 8 company under the National Mission on Interdisciplinary Cyber-Physical Systems (NM-ICPS), DST. Operating alongside I3F, it specializes in Data Analytics and Predictive Technologies, offering startups access to cutting-edge research in Telecommunications, Power, Defense, and Healthcare.
+            </p>
+          </div>
+          
+          {/* IIT (BHU) Foundation */}
+          <div className="bg-slate-50 p-8 border border-slate-200 hover:shadow-lg transition-shadow relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <h3 className="text-xl font-bold text-slate-900 mb-4 relative z-10">IIT (BHU) Foundation, USA</h3>
+            <p className="text-slate-600 leading-relaxed text-sm relative z-10">
+              A US-based alumni organization actively supporting I3F by mentoring founders, facilitating international market access, and providing seed funding grants (up to $30,000) for high-potential startups.
+            </p>
+          </div>
+
+          {/* Campus Ecosystem */}
+          <div className="bg-slate-50 p-8 border border-slate-200 hover:shadow-lg transition-shadow relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+            <h3 className="text-xl font-bold text-slate-900 mb-4 relative z-10">Campus Ecosystem</h3>
+            <p className="text-slate-600 leading-relaxed text-sm relative z-10">
+              Incubatees benefit from the dense concentration of technical talent (students and faculty) at IIT (BHU), multiple Centers of Excellence, and specialized laboratories across 15+ engineering and science departments.
+            </p>
+          </div>
         </div>
       </div>
     </section>
