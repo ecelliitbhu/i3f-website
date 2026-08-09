@@ -38,7 +38,7 @@ export default function Home() {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#apply" className="px-8 py-4 bg-brand-accent hover:bg-orange-600 text-white font-bold text-lg text-center transition-colors shadow-lg">
+              <Link href="#apply" className="px-8 py-4 bg-brand-accent hover:bg-cyan-600 text-white font-bold text-lg text-center transition-colors shadow-lg">
                 Apply for Incubation
               </Link>
               <Link href="#about" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-lg text-center transition-all">
