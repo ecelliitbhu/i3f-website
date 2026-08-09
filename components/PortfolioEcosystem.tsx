@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 
 type Startup = { name: string; domain: string; focus: string; mark: string };
 
@@ -79,7 +80,7 @@ export default function PortfolioEcosystem() {
           </article>
         ))}
       </div>
-      {visibleStartups.length === 0 && <p className="py-16 text-center text-slate-500 font-medium">No startups match that search yet.</p>}<div className="mt-16 text-center"><button className="border border-slate-300 bg-white px-8 py-4 font-bold text-slate-700 transition hover:border-brand-primary hover:text-brand-primary hover:bg-slate-50 shadow-sm uppercase tracking-wider text-sm">View full startup directory &rarr;</button></div>
+      {visibleStartups.length === 0 && <p className="py-16 text-center text-slate-500 font-medium">No startups match that search yet.</p>}<div className="mt-16 text-center"><Link href="/startups" className="inline-block border border-slate-300 bg-white px-8 py-4 font-bold text-slate-700 transition hover:border-brand-primary hover:text-brand-primary hover:bg-slate-50 shadow-sm uppercase tracking-wider text-sm">View full startup directory &rarr;</Link></div>
     </div></section>
 
     <section id="units" className="py-24 bg-white border-t border-slate-200"><div className="container mx-auto max-w-7xl px-4 lg:px-8"><div className="mx-auto mb-16 max-w-2xl text-center"><div className="inline-flex justify-center items-center gap-2 mb-4"><div className="w-8 h-1 bg-brand-accent"></div><span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Support system</span></div><h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">One ecosystem, multiple engines</h2><p className="mt-6 text-lg text-slate-600 leading-relaxed">Specialised units that meet founders wherever their idea begins.</p></div><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">{units.map((unit) => <article key={unit.code} className={`group relative border border-slate-200 bg-white p-8 transition-all duration-200 hover:shadow-md border-t-4 ${unit.colorClass}`}><div className="text-sm font-black text-brand-accent mb-4 uppercase tracking-widest">{unit.code}</div><h3 className="text-xl font-bold text-slate-900 leading-tight">{unit.name}</h3><p className="mt-4 text-sm leading-relaxed text-slate-600">{unit.text}</p></article>)}</div></div></section>
