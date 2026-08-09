@@ -264,6 +264,125 @@ export default function Home() {
   </div>
 </section>
 
+    {/* 5. SERVICES & FACILITIES */}
+    <section id="services" className="py-24 bg-white border-t border-slate-200">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <div className="w-8 h-1 bg-brand-accent"></div>
+            <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Services & Facilities</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Everything you need to build</h2>
+          <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            We provide state-of-the-art infrastructure and dedicated support systems to ensure your idea scales seamlessly.
+          </p>
+        </div>
+        <div className="grid gap-8 md:grid-cols-3">
+          {[
+            { title: "Co-Working Spaces", icon: "🏢", desc: "24/7 access to modern plug-and-play offices, meeting rooms, and collaborative zones." },
+            { title: "Prototyping Labs", icon: "⚙️", desc: "Advanced hardware and software labs equipped for IoT, deep tech, and rapid prototyping." },
+            { title: "Mentorship", icon: "🤝", desc: "Direct access to industry veterans, IIT BHU alumni, and academic domain experts." },
+            { title: "Seed Funding", icon: "💰", desc: "Facilitated access to government grants, VC networks, and angel investors." },
+            { title: "Legal & IP Support", icon: "⚖️", desc: "Expert guidance for company registration, compliance, and filing patents." },
+            { title: "Networking Events", icon: "🌐", desc: "Regular pitch days, hackathons, and investor summits to build your network." },
+          ].map((service, i) => (
+            <div key={i} className="group p-8 border border-slate-200 hover:border-brand-primary hover:shadow-xl transition-all duration-300">
+              <div className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left">{service.icon}</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* 8. ACHIEVEMENTS */}
+    <section id="achievements" className="py-24 bg-brand-primary text-white relative overflow-hidden">
+      {/* Abstract Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute -top-24 -left-24 w-96 h-96 border border-white rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-full"></div>
+      </div>
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        <div className="grid gap-12 md:grid-cols-4 text-center">
+          {[
+            { stat: "50+", label: "Startups Incubated" },
+            { stat: "15Cr+", label: "Funding Raised" },
+            { stat: "25+", label: "Industry Partners" },
+            { stat: "100+", label: "Mentors Active" },
+          ].map((ach, i) => (
+            <div key={i}>
+              <div className="text-5xl md:text-6xl font-black text-brand-accent mb-4">{ach.stat}</div>
+              <div className="text-sm font-bold uppercase tracking-widest text-white/80">{ach.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* 9. VISION & FUTURE */}
+    <section id="vision" className="py-24 bg-slate-50 border-b border-slate-200">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1 relative h-[500px] bg-white border border-slate-200 shadow-lg overflow-hidden flex items-center justify-center p-12">
+            {/* Placeholder Abstract Graphic for Vision */}
+            <div className="relative w-full h-full border-2 border-dashed border-slate-300 rounded-full flex items-center justify-center">
+              <div className="absolute w-3/4 h-3/4 border-2 border-dashed border-brand-primary/40 rounded-full animate-[spin_60s_linear_infinite]"></div>
+              <div className="absolute w-1/2 h-1/2 bg-brand-primary/10 rounded-full"></div>
+              <div className="text-center z-10">
+                <div className="text-brand-primary font-bold tracking-widest uppercase text-sm mb-2">The Future</div>
+                <div className="text-slate-400 text-xs">[Insert Real Facility Photo Later]</div>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="w-8 h-1 bg-brand-accent"></div>
+              <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Vision</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Pioneering the next era of innovation.</h2>
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              The future of I-3F is to cement IIT (BHU) as a global hub for deep-tech, sustainable agriculture, and healthcare innovation. We envision a campus where every bold idea has the pathway, funding, and mentorship required to become a market-ready enterprise.
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Through strategic expansion of our R-ABI, JIC, and Cisco thingQbator units, we are building an interconnected ecosystem that bridges the gap between academic research and commercial impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* 10. CONTACT SECTION */}
+    <section id="contact" className="py-24 bg-slate-900 text-white relative">
+      <div className="container mx-auto px-4 max-w-7xl text-center">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Ready to scale your idea?</h2>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+          <Link href="/incubation/how-to-join" className="px-8 py-4 bg-brand-primary hover:bg-brand-secondary text-white font-bold transition-colors shadow-lg w-full sm:w-auto">
+            Apply for Incubation
+          </Link>
+          <Link href="mailto:i3f@iitbhu.ac.in" className="px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 font-bold transition-colors shadow-lg w-full sm:w-auto">
+            Partner With Us
+          </Link>
+          <Link href="mailto:i3f@iitbhu.ac.in" className="px-8 py-4 bg-transparent border border-slate-600 hover:border-white transition-colors w-full sm:w-auto font-bold text-slate-300 hover:text-white">
+            Contact Our Team
+          </Link>
+        </div>
+
+        <div className="max-w-2xl mx-auto border-t border-slate-800 pt-12">
+          <div className="mb-4 text-brand-accent font-bold uppercase tracking-widest text-sm">Visit Us</div>
+          <p className="text-slate-400 text-lg leading-relaxed mb-6">
+            Ideation Innovation & Incubation (I-3) Foundation<br/>
+            Opposite IIT (BHU) Proctor Office,<br/>
+            Indian Institute of Technology (BHU), Varanasi - 221005 (UP)
+          </p>
+          <p className="text-lg font-bold text-white">
+            <a href="mailto:i3f@iitbhu.ac.in" className="hover:text-brand-accent transition-colors">i3f@iitbhu.ac.in</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
     </div>
   );
 }

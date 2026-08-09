@@ -56,8 +56,21 @@ export default function Navbar() {
             Portfolio
           </Link>
 
-        </nav>
+          <Link
+            href="/#services"
+            className="hover:text-brand-primary transition-colors"
+          >
+            Services
+          </Link>
 
+          <Link
+            href="/#contact"
+            className="hover:text-brand-primary transition-colors"
+          >
+            Contact
+          </Link>
+
+        </nav>
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <Link
