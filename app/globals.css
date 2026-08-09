@@ -1,12 +1,13 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-brand-primary: #4c1d95;
   /* Deep Purple */
-  --color-brand-secondary: #7c3aed;
-  /* Vibrant Purple */
+  --color-brand-secondary: #5b21b6;
+  /* Slightly lighter deep purple */
   --color-brand-accent: #fbbf24;
-  /* Warm Gold Accent */
+  /* BHU Official Saffron/Orange */
 
   --color-background: #ffffff;
   --color-foreground: #0f172a;
@@ -15,14 +16,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-background: #020617;
-    --color-foreground: #f8fafc;
-    --color-brand-primary: #8b5cf6;
-    /* Lighter purple for dark mode */
-  }
-}
+
 
 :root {
   --background: var(--color-background);

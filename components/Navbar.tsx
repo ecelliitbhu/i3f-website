@@ -2,9 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="w-full">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/80">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo Area */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded bg-brand-primary flex items-center justify-center text-white font-bold">
@@ -23,7 +22,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
 
           <Link
-            href="/about"
+            href="/#about"
             className="hover:text-brand-primary transition-colors"
           >
             About I3F
@@ -51,18 +50,31 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/startups"
+            href="/#units"
             className="hover:text-brand-primary transition-colors"
           >
             Portfolio
           </Link>
 
-        </nav>
+          <Link
+            href="/#services"
+            className="hover:text-brand-primary transition-colors"
+          >
+            Services
+          </Link>
 
+          <Link
+            href="/#contact"
+            className="hover:text-brand-primary transition-colors"
+          >
+            Contact
+          </Link>
+
+        </nav>
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <Link
-            href="/apply"
+            href="/incubation/how-to-join"
             className="px-4 py-2 rounded-md bg-brand-primary hover:bg-brand-secondary text-white text-sm font-medium transition-colors shadow-sm"
           >
             Apply Now

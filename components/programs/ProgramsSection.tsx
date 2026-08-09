@@ -111,6 +111,60 @@ export default function ProgramsSection() {
           ))}
 
         </div>
+
+        {/* Comparison Block */}
+        <div className="mt-20 max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+          <div className="bg-brand-primary p-6 text-center">
+            <h3 className="text-2xl font-bold text-white tracking-tight">RKVY-RAFTAAR Program Impact</h3>
+            <p className="text-white/80 mt-2">A look at the numbers driving our core agricultural incubation programs.</p>
+          </div>
+          <div className="p-8">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr>
+                    <th className="p-4 border-b border-slate-200 dark:border-slate-800 font-bold text-slate-500 uppercase tracking-wider text-xs">Metric</th>
+                    <th className="p-4 border-b border-slate-200 dark:border-slate-800 font-bold text-brand-primary uppercase tracking-wider text-xs">ANKURAN (Pre-Seed)</th>
+                    <th className="p-4 border-b border-slate-200 dark:border-slate-800 font-bold text-brand-primary uppercase tracking-wider text-xs">PRASFUTAN (Seed)</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700 dark:text-slate-300">
+                  <tr>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-medium">Applications Received</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">597</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">442</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-medium">Startups Trained</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">110</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">85</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-medium">Recommended by RC</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">45</td>
+                    <td className="p-4 border-b border-slate-100 dark:border-slate-800 font-bold text-slate-900 dark:text-white">40</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 font-medium">Grant-in-aid Recommended</td>
+                    <td className="p-4 font-bold text-slate-900 dark:text-white">~₹201.21 Lakhs</td>
+                    <td className="p-4 font-bold text-slate-900 dark:text-white">~₹521 Lakhs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-6 justify-center">
+              <div className="text-center px-6 border-r border-slate-200 dark:border-slate-800 last:border-0">
+                <div className="text-3xl font-black text-brand-accent">71</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">Startups Incubated</div>
+              </div>
+              <div className="text-center px-6 border-r border-slate-200 dark:border-slate-800 last:border-0">
+                <div className="text-3xl font-black text-brand-accent">~₹312L</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">Disbursed So Far</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Additional Funding & Support */}
 <section className="mt-20">
   <div className="text-center mb-12">
