@@ -1,12 +1,13 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-brand-primary: #4c1d95;
-  /* Deep Purple */
-  --color-brand-secondary: #7c3aed;
-  /* Vibrant Purple */
-  --color-brand-accent: #fbbf24;
-  /* Warm Gold Accent */
+  --color-brand-primary: #211D70;
+  /* BHU Official Blue */
+  --color-brand-secondary: #3b35a8;
+  /* Lighter BHU Blue for hovers */
+  --color-brand-accent: #F15A22;
+  /* BHU Official Saffron/Orange */
 
   --color-background: #ffffff;
   --color-foreground: #0f172a;
