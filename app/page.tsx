@@ -270,28 +270,56 @@ export default function Home() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-8 h-1 bg-brand-accent"></div>
-            <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Services & Facilities</span>
+            <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Beyond Funding</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Everything you need to build</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">End-to-End Support & Infrastructure</h2>
           <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            We provide state-of-the-art infrastructure and dedicated support systems to ensure your idea scales seamlessly.
+            We provide state-of-the-art infrastructure and dedicated support systems to ensure your idea scales seamlessly from prototype to enterprise.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+
+        {/* Services Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-20">
           {[
-            { title: "Co-Working Spaces", icon: "🏢", desc: "24/7 access to modern plug-and-play offices, meeting rooms, and collaborative zones." },
-            { title: "Prototyping Labs", icon: "⚙️", desc: "Advanced hardware and software labs equipped for IoT, deep tech, and rapid prototyping." },
-            { title: "Mentorship", icon: "🤝", desc: "Direct access to industry veterans, IIT BHU alumni, and academic domain experts." },
-            { title: "Seed Funding", icon: "💰", desc: "Facilitated access to government grants, VC networks, and angel investors." },
-            { title: "Legal & IP Support", icon: "⚖️", desc: "Expert guidance for company registration, compliance, and filing patents." },
-            { title: "Networking Events", icon: "🌐", desc: "Regular pitch days, hackathons, and investor summits to build your network." },
+            { title: "Technical Due Diligence", icon: "🔍", desc: "Assessing technical feasibility and evaluating early prototypes for investor readiness." },
+            { title: "Training Programs", icon: "📚", desc: "Access to IIT (BHU)'s deep bench of industry and academic experts." },
+            { title: "Mentoring", icon: "🤝", desc: "One-on-one guidance from experienced mentors across domains." },
+            { title: "Funding Support", icon: "💰", desc: "Assistance in accessing funds from DST, MSME, various Ministries, and CSR sources." },
+            { title: "Legal Advice", icon: "⚖️", desc: "Connections to legal firms for compliance and structuring." },
+            { title: "IP Creation", icon: "🛡️", desc: "Support via IIT (BHU)'s own IP creation and protection policy." },
+            { title: "Networking Support", icon: "🌐", desc: "Access to IIT (BHU)'s extensive alumni and industry network." },
           ].map((service, i) => (
-            <div key={i} className="group p-8 border border-slate-200 hover:border-brand-primary hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left">{service.icon}</div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+            <div key={i} className="group p-6 border border-slate-200 hover:border-brand-primary hover:shadow-lg transition-all duration-300">
+              <div className="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">{service.icon}</div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">{service.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{service.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* Facilities Box */}
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 lg:p-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Infrastructure Built for Builders</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-bold text-brand-primary mb-3 uppercase tracking-wider text-sm">Lab & Equipment</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Cold Room, Fermenters, Chemical Workstation, Hot Air Oven, PCR, Gel Doc Systems, Gel Electrophoresis, Deep Freezer, Cell Sonicator, Polarizing Microscope.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-brand-primary mb-3 uppercase tracking-wider text-sm">Workspace & Utilities</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Office Space, Computer Systems, Printers, Internet/Wi-Fi, Photocopier, Conference Hall, Training Hall, Prototype & Testing Area, Utility Area, Backup Power.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-brand-primary mb-3 uppercase tracking-wider text-sm">Institute-Level Facilities</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                HR-TEM, HR-SEM, SEM, SPM, 500MHz NMR, Magnetic Property Measurement System, HR-XRD, BT-XRD, PCB Prototyping Machine, Ion Chromatography, Makers Space, Designer Space, Tool Room.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -304,16 +332,22 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white rounded-full"></div>
       </div>
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className="grid gap-12 md:grid-cols-4 text-center">
+        <div className="mb-12 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Overall Impact & Track Record</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">Driving real economic change and empowering entrepreneurs.</p>
+        </div>
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-6 text-center">
           {[
-            { stat: "50+", label: "Startups Incubated" },
-            { stat: "15Cr+", label: "Funding Raised" },
-            { stat: "25+", label: "Industry Partners" },
-            { stat: "100+", label: "Mentors Active" },
+            { stat: "195", label: "Startups Trained" },
+            { stat: "62", label: "Startups Incubated" },
+            { stat: "₹500L+", label: "Grant Disbursed" },
+            { stat: "14", label: "Patents Granted" },
+            { stat: "₹30Cr+", label: "Revenue Generated" },
+            { stat: "290+", label: "Direct Jobs Created" },
           ].map((ach, i) => (
             <div key={i}>
-              <div className="text-5xl md:text-6xl font-black text-brand-accent mb-4">{ach.stat}</div>
-              <div className="text-sm font-bold uppercase tracking-widest text-white/80">{ach.label}</div>
+              <div className="text-4xl md:text-5xl font-black text-brand-accent mb-2">{ach.stat}</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-white/80">{ach.label}</div>
             </div>
           ))}
         </div>
@@ -323,30 +357,46 @@ export default function Home() {
     {/* 9. VISION & FUTURE */}
     <section id="vision" className="py-24 bg-slate-50 border-b border-slate-200">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 relative h-[500px] bg-white border border-slate-200 shadow-lg overflow-hidden flex items-center justify-center p-12">
-            {/* Placeholder Abstract Graphic for Vision */}
-            <div className="relative w-full h-full border-2 border-dashed border-slate-300 rounded-full flex items-center justify-center">
-              <div className="absolute w-3/4 h-3/4 border-2 border-dashed border-brand-primary/40 rounded-full animate-[spin_60s_linear_infinite]"></div>
-              <div className="absolute w-1/2 h-1/2 bg-brand-primary/10 rounded-full"></div>
-              <div className="text-center z-10">
-                <div className="text-brand-primary font-bold tracking-widest uppercase text-sm mb-2">The Future</div>
-                <div className="text-slate-400 text-xs">[Insert Real Facility Photo Later]</div>
-              </div>
-            </div>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <div className="w-8 h-1 bg-brand-accent"></div>
+            <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Where We're Headed</span>
           </div>
-          <div className="order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <div className="w-8 h-1 bg-brand-accent"></div>
-              <span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Vision</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Pioneering the next era of innovation.</h2>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              The future of I-3F is to cement IIT (BHU) as a global hub for deep-tech, sustainable agriculture, and healthcare innovation. We envision a campus where every bold idea has the pathway, funding, and mentorship required to become a market-ready enterprise.
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Through strategic expansion of our R-ABI, JIC, and Cisco thingQbator units, we are building an interconnected ecosystem that bridges the gap between academic research and commercial impact.
-            </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Vision for the Future</h2>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            As I3F completes its third year, it is entering a new phase — moving from an agriculture-focused Business Incubation Centre toward a diversified, holistically funded innovation ecosystem.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="bg-white p-8 border border-slate-200 hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-brand-primary mb-4">Key Pillars</h3>
+            <ul className="space-y-4 text-sm text-slate-600">
+              <li><strong className="text-slate-900">Diversified Funding:</strong> Eligibility for foreign grants, CSR funds, and additional government grants.</li>
+              <li><strong className="text-slate-900">Holistic Ecosystem:</strong> Financial backing combined with mentorship and state-of-the-art facilities.</li>
+              <li><strong className="text-slate-900">Innovation & Impact:</strong> Priority on Agriculture, Clean Energy, Health, AI/ML, and Women Empowerment.</li>
+              <li><strong className="text-slate-900">Sustainable Growth:</strong> Aligning with CSR and sustainable development goals.</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 border border-slate-200 hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-brand-primary mb-4">$1 Trillion UP Economy</h3>
+            <ul className="space-y-4 text-sm text-slate-600">
+              <li>Driving agripreneurship to boost rural income.</li>
+              <li>Enabling deep-tech startups in AI, IoT, renewable energy, and healthcare.</li>
+              <li>Building export-ready startups in sustainable fabrics and green tech.</li>
+              <li>Enhancing youth employment and human capital development.</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-8 border border-slate-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-white to-slate-50">
+            <h3 className="text-xl font-bold text-brand-primary mb-4">Roadmap Ahead</h3>
+            <ul className="space-y-4 text-sm text-slate-600">
+              <li>Expand startup cohorts in green energy, circular economy, and rural development.</li>
+              <li>Establish Regional Innovation & Startup Hubs across Eastern UP.</li>
+              <li>Scale mentorship and funding networks with global partners.</li>
+              <li>Support Atmanirbhar Bharat by nurturing 1,000+ startups over the next 5 years.</li>
+            </ul>
           </div>
         </div>
       </div>
