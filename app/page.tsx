@@ -5,28 +5,44 @@ export default function Home() {
     <div className="flex flex-col w-full">
 
       {/* HERO SECTION */}
-      <section className="relative w-full pb-32 pt-20 lg:pt-32 overflow-hidden flex items-center justify-center">
+      <section className="relative w-full pt-20 pb-40 lg:pt-24 lg:pb-48 overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-brand-secondary to-brand-primary">
+        
         {/* Decorative background shapes */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand-primary/10 blur-[80px] -mr-40 -mt-40 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-brand-secondary/10 blur-[80px] -ml-40 -mb-40 pointer-events-none"></div>
+        <div className="absolute top-10 left-10 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-20 right-20 w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl pointer-events-none"></div>
+        
+        {/* Distinct Floating Circles (Inspired by E-Cell main site) */}
+        <div className="absolute top-32 left-1/4 w-24 h-24 rounded-full bg-white/10 pointer-events-none"></div>
+        <div className="absolute bottom-40 right-1/4 w-32 h-32 rounded-full bg-white/10 pointer-events-none"></div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
-            Empowering <span className="text-brand-primary">Innovators</span> to <br className="hidden md:block" />
-            Build the Future
+        <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center">
+          
+          {/* Top Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white text-sm font-medium mb-8 backdrop-blur-sm shadow-sm">
+            <svg className="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"></path></svg>
+            Innovation Ecosystem
+          </div>
+
+          {/* Huge Title */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 drop-shadow-sm">
+            I3F <span className="text-brand-accent">Incubation</span> Process
           </h1>
 
-          <p className="mt-6 text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            The I3F Incubation Process provides end-to-end support for entrepreneurs at IIT (BHU) Varanasi. From idea to maturity, we help you scale.
+          {/* Subtitle */}
+          <p className="mt-4 text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-10 leading-relaxed font-medium">
+            Discover our comprehensive ecosystem fostering innovation, entrepreneurship, and technological advancement at IIT BHU.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <button className="px-8 py-4 rounded-full bg-brand-primary hover:bg-brand-secondary text-white text-lg font-medium transition-all shadow-lg hover:shadow-brand-primary/30 hover:-translate-y-1">
-              Start Your Journey
-            </button>
-            <button className="px-8 py-4 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 hover:border-brand-primary dark:hover:border-brand-primary text-slate-900 dark:text-white text-lg font-medium transition-all hover:-translate-y-1">
-              Explore Programs
-            </button>
+          {/* Feature Tags (Below subtitle) */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center text-white/90 text-sm md:text-base font-medium mt-4">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+              Nurturing Ideas Into Reality
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              Empowering Entrepreneurs
+            </div>
           </div>
         </div>
       </section>
