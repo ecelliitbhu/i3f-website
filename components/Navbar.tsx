@@ -21,6 +21,7 @@ export default function Navbar() {
           <Link href="#model" className="hover:text-brand-primary transition-colors">Incubation Model</Link>
           <Link href="#programs" className="hover:text-brand-primary transition-colors">Programs</Link>
           <Link href="#portfolio" className="hover:text-brand-primary transition-colors">Portfolio</Link>
+          <Link href="#units" className="hover:text-brand-primary transition-colors">Ecosystem</Link>
         </nav>
 
         {/* CTA Button */}
