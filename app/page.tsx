@@ -1,3 +1,5 @@
+import PortfolioEcosystem from "../components/PortfolioEcosystem";
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
@@ -71,6 +73,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PortfolioEcosystem />
 
     </div>
   );
