@@ -7,18 +7,13 @@ export default function Home() {
     <div className="flex flex-col w-full bg-slate-50 font-sans">
       
       {/* HERO SECTION - Modern Government/Authority Style */}
-      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/hero-bg.png" 
-            alt="IIT BHU Innovation Campus" 
-            fill 
-            className="object-cover object-center"
-            priority
-          />
-          {/* Deep Blue Gradient Overlay for readability and Authority aesthetic */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/95 via-brand-primary/80 to-transparent"></div>
+      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center bg-brand-primary overflow-hidden">
+        {/* Abstract Geometric Background */}
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-accent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-secondary rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+          {/* Subtle Grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -123,16 +118,32 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Photography */}
-            <div className="relative h-[600px] w-full hidden lg:block">
-              {/* Offset decorative box behind image */}
-              <div className="absolute top-8 -right-8 w-full h-full border-2 border-brand-primary/20 z-0"></div>
-              <Image 
-                src="/about-img.png"
-                alt="Entrepreneurs collaborating at I3F"
-                fill
-                className="object-cover shadow-2xl z-10"
-              />
+            {/* Right: Abstract Geometric Element */}
+            <div className="relative h-[600px] w-full hidden lg:flex items-center justify-center p-8">
+              {/* Offset decorative box */}
+              <div className="absolute top-8 -right-8 w-full h-full border-2 border-slate-200 z-0"></div>
+              {/* Abstract Art Piece */}
+              <div className="relative w-full h-full bg-white border border-slate-200 shadow-sm z-10 overflow-hidden flex flex-col">
+                <div className="flex-1 bg-slate-50 flex items-center justify-center p-12">
+                  <div className="relative w-full h-full">
+                    {/* Concentric circles and lines for a tech/network feel */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-brand-primary/20 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-brand-primary/40 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-primary/5 rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-brand-primary text-white rounded flex items-center justify-center shadow-lg">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                      </div>
+                    </div>
+                    {/* Connecting lines */}
+                    <div className="absolute top-1/2 left-0 w-full h-px bg-brand-primary/10"></div>
+                    <div className="absolute top-0 left-1/2 w-px h-full bg-brand-primary/10"></div>
+                  </div>
+                </div>
+                <div className="h-32 bg-brand-primary border-t border-brand-secondary p-8 flex flex-col justify-center">
+                   <div className="text-white/70 font-mono text-sm tracking-widest uppercase mb-2">Network Hub</div>
+                   <div className="text-white font-bold text-xl">Connecting Ideation to Incubation</div>
+                </div>
+              </div>
             </div>
             
           </div>
