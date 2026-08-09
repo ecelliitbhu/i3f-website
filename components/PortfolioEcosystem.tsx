@@ -73,9 +73,9 @@ export default function PortfolioEcosystem() {
               </p>
             </div>
             
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-brand-primary text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all z-10">
+            <button className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-brand-primary text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all z-10 outline-none w-full text-left">
               Explore <span>&rarr;</span>
-            </div>
+            </button>
           </article>
         ))}
       </div>
