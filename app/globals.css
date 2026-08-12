@@ -2,18 +2,18 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-brand-primary: #4c1d95;
-  /* Deep Purple */
-  --color-brand-secondary: #5b21b6;
-  /* Slightly lighter deep purple */
+  --color-brand-primary: #800000;
+  /* IIT BHU Maroon */
+  --color-brand-secondary: #660000;
+  /* Darker Maroon */
   --color-brand-accent: #fbbf24;
   /* BHU Official Saffron/Orange */
 
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   /* Dark slate for text */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-montserrat);
 }
 
 
