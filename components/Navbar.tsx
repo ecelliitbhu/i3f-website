@@ -5,16 +5,18 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/80">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo Area */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-brand-primary flex items-center justify-center text-white font-bold">
-            I3F
-          </div>
+        <div className="flex items-center gap-4">
+          <img 
+            src="https://www.google.com/s2/favicons?domain=iitbhu.ac.in&sz=128" 
+            alt="IIT BHU Logo" 
+            className="w-12 h-12 object-contain drop-shadow-sm"
+          />
 
           <Link
             href="/"
-            className="font-bold text-xl tracking-tight text-slate-900 dark:text-white"
+            className="font-bold text-lg md:text-xl tracking-tight text-slate-900 dark:text-white ml-2"
           >
-            Incubation Process
+            Ideation Innovation and Incubation Foundation
           </Link>
         </div>
 
@@ -22,7 +24,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
 
           <Link
-            href="/#about"
+            href="/about"
             className="hover:text-brand-primary transition-colors"
           >
             About I3F
@@ -50,14 +52,14 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/#units"
+            href="/startups"
             className="hover:text-brand-primary transition-colors"
           >
             Portfolio
           </Link>
 
           <Link
-            href="/#services"
+            href="/facilities"
             className="hover:text-brand-primary transition-colors"
           >
             Services

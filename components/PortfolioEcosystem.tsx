@@ -1,39 +1,25 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import Link from "next/link";
+import { Trophy, Medal, Award, Star, Crown, ShieldCheck, TrendingUp, Leaf, Zap } from "lucide-react";
 
-type Startup = { name: string; domain: string; focus: string; mark: string };
-
-const startups: Startup[] = [
-  { name: "Aryo Green Tech", domain: "Deep Tech", focus: "Superconducting magnetic engine", mark: "AG" },
-  { name: "Titlis Engineering", domain: "Clean Tech", focus: "Smart solar tree and air-water generator", mark: "TE" },
-  { name: "Sikhar Vaidik Krishi", domain: "Agri Tech", focus: "Circular agri-ecosystem for regenerative farming", mark: "SK" },
-  { name: "Divavi Enterprises", domain: "Supply Chain", focus: "Rural-to-urban market access for producers", mark: "DE" },
-  { name: "ExFlair Trade", domain: "Fisheries", focus: "High-density sustainable fish farming systems", mark: "EX" },
-  { name: "Manwani's Pearl Culture", domain: "Agri Tech", focus: "India's first organic freshwater pearl farming model", mark: "MP" },
-  { name: "Heal Venture Biosciences", domain: "Biotechnology", focus: "Insect-protein aquafeed, bio-fertilizers and bio-pesticides", mark: "HV" },
-  { name: "Delbrone Innovation", domain: "Deep Tech", focus: "Anti-drone systems for a safer future", mark: "DI" },
-  { name: "Triphan Healthcare", domain: "Healthcare", focus: "Nanotechnology antimicrobial products", mark: "TH" },
-  { name: "BondU Labs", domain: "ICT", focus: "AI matchmaking and lead capture for trade shows", mark: "BL" },
-];
 const awards = [
-  { company: "Titlis Engg. & Projects", award: "Gujarat Leadership Award 2020", detail: "Best Product of the Year" },
-  { company: "JVKS Agrotech", award: "RAFTAAR Agri-startup Award", detail: "Received by Hon'ble Ag. Minister" },
-  { company: "Manwani's Pearl Culture", award: "Top 50 Innovative Startups", detail: "StartIn UP" },
-  { company: "Rosehub Edutech", award: "National Winner", detail: "Ministry of Education Innovation Cell" },
-  { company: "Frenzy Farm LLP", award: "Best Emerging Startup", detail: "Agri-Tech Expo 2022" },
-  { company: "Rudranjali Innovative Agritech", award: "Sustainability Innovator", detail: "Green India Awards" },
-  { company: "Healventure Biosciences", award: "Bio-Innovation Excellence", detail: "Biotech Startup Expo" },
-  { company: "Sedax Data Solution", award: "Top Tech Pioneer", detail: "NASSCOM DeepTech Club" },
-  { company: "Agrifeeder Pvt. Ltd.", award: "Social Impact Award", detail: "Rural Development Ministry" }
+  { company: "Titlis Engg. & Projects", award: "Gujarat Leadership Award", detail: "Best Product of the Year", icon: <Trophy className="w-6 h-6" /> },
+  { company: "JVKS Agrotech", award: "RAFTAAR Agri-startup Award", detail: "Received by Hon'ble Ag. Minister", icon: <Leaf className="w-6 h-6" /> },
+  { company: "Manwani's Pearl Culture", award: "Top 50 Innovative Startups", detail: "StartIn UP", icon: <Star className="w-6 h-6" /> },
+  { company: "Rosehub Edutech", award: "National Winner", detail: "Ministry of Education Innovation Cell", icon: <Crown className="w-6 h-6" /> },
+  { company: "Frenzy Farm LLP", award: "Best Emerging Startup", detail: "Agri-Tech Expo 2022", icon: <TrendingUp className="w-6 h-6" /> },
+  { company: "Rudranjali Innovative Agritech", award: "Sustainability Innovator", detail: "Green India Awards", icon: <ShieldCheck className="w-6 h-6" /> },
+  { company: "Healventure Biosciences", award: "Bio-Innovation Excellence", detail: "Biotech Startup Expo", icon: <Zap className="w-6 h-6" /> },
+  { company: "Sedax Data Solution", award: "Top Tech Pioneer", detail: "NASSCOM DeepTech Club", icon: <Award className="w-6 h-6" /> },
+  { company: "Agrifeeder Pvt. Ltd.", award: "Social Impact Award", detail: "Rural Development Ministry", icon: <Medal className="w-6 h-6" /> }
 ];
 
 const units = [
-  { code: "R-ABI", name: "RKVY-RAFTAAR Agri Business Incubator", text: "Promoting agripreneurship through financial support and hands-on incubation since 2019.", colorClass: "border-t-emerald-500" },
-  { code: "JIC", name: "Joint Incubation Centre", text: "With Union Bank of India, advancing software, quantum, cybersecurity, IoT and data innovation.", colorClass: "border-t-blue-500" },
-  { code: "CISCO", name: "Cisco thingQbator", text: "An AI and IoT makerspace for hackathons, workshops, prototypes and startup tracks.", colorClass: "border-t-violet-500" },
-  { code: "E-CELL", name: "Entrepreneurship Cell", text: "A student-led engine for entrepreneurial awareness, ideation and capacity building on campus.", colorClass: "border-t-brand-accent" },
+  { code: "R-ABI", name: "RKVY-RAFTAAR Agri Business Incubator", text: "Operational since Jan 2019 under the Ministry of Agriculture & Farmers' Welfare's scheme, promoting agripreneurship through extensive financial support and incubation.", colorClass: "border-t-emerald-500", image: "/images/logos/rkvy_logo.png" },
+  { code: "JIC", name: "Joint Incubation Centre", text: "Established in 2023 with Union Bank of India. Enables innovation in software, quantum computing, cybersecurity, IoT, and data analytics with a focus on social impact and women entrepreneurs.", colorClass: "border-t-blue-500", image: "/images/logos/jic_logo.png" },
+  { code: "CISCO", name: "Cisco thingQbator", text: "An AI/IoT-focused makerspace launched in 2018 via Cisco's CSR with NASSCOM Foundation. Runs hackathons, workshops, and internship tracks (Learning, Project, Startup).", colorClass: "border-t-violet-500", image: "/images/logos/cisco_logo.png" },
+  { code: "E-CELL", name: "Entrepreneurship Cell", text: "A student-run Entrepreneurship Cell that actively builds entrepreneurial awareness on campus through specialized workshops, ideation sessions, and capacity-building programs.", colorClass: "border-t-brand-accent", image: "/images/logos/ecell_logo.webp" },
 ];
 
 const partners = ["IARI, New Delhi", "NIAM, Jaipur", "MANAGE, Hyderabad", "UAS, Dharwad", "AAU, Jorhat", "25+ Incubators Nationwide"];
@@ -53,48 +39,9 @@ const moreStories = [
 ];
 
 export default function PortfolioEcosystem() {
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState("All");
-  const categories = ["All", ...Array.from(new Set(startups.map((startup) => startup.domain)))];
-  const visibleStartups = useMemo(() => startups.filter((startup) =>
-    (filter === "All" || startup.domain === filter) && `${startup.name} ${startup.focus}`.toLowerCase().includes(query.toLowerCase())
-  ), [filter, query]);
-
   return <>
-    <section id="portfolio" className="bg-slate-50 border-t border-slate-200 py-24"><div className="container mx-auto max-w-7xl px-4 lg:px-8">
-      <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><div className="max-w-2xl"><div className="inline-flex items-center gap-2 mb-4"><div className="w-8 h-1 bg-brand-accent"></div><span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Portfolio</span></div><h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Startups we&apos;ve built with</h2><p className="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed">From agritech to advanced engineering, each venture is a new possibility made practical.</p></div><label className="relative block w-full md:w-80"><span className="sr-only">Search startups</span><svg className="absolute left-4 top-4 h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search a startup" className="w-full border border-slate-300 bg-white py-3.5 pl-12 pr-4 text-slate-800 outline-none transition focus:border-brand-primary focus:ring-1 focus:ring-brand-primary shadow-sm" /></label></div>
-      <div className="mb-10 flex flex-wrap gap-2">{categories.map((category) => <button key={category} onClick={() => setFilter(category)} className={`px-5 py-2.5 text-sm font-semibold transition border ${filter === category ? "bg-brand-primary border-brand-primary text-white" : "bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 shadow-sm"}`}>{category}</button>)}</div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {visibleStartups.map((startup, index) => (
-          <article key={startup.name} className="group relative min-h-[320px] flex flex-col border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-brand-primary hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-            {/* Decorative background accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-slate-100 to-transparent opacity-50 group-hover:from-brand-primary/10 transition-colors pointer-events-none"></div>
-            
-            <div className="flex-1 z-10">
-              <div className="mb-6 flex h-14 w-14 items-center justify-center bg-brand-primary rounded-lg text-sm font-bold text-white shadow-sm transition-transform duration-300 group-hover:scale-110">
-                {startup.mark}
-              </div>
-              <p className="text-[10px] font-bold tracking-widest text-brand-accent uppercase mb-2">
-                {startup.domain}
-              </p>
-              <h3 className="text-lg font-bold text-slate-900 leading-tight mb-3">
-                {startup.name}
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                {startup.focus}
-              </p>
-            </div>
-            
-            <button className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-brand-primary text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all z-10 outline-none w-full text-left">
-              Explore <span>&rarr;</span>
-            </button>
-          </article>
-        ))}
-      </div>
-      {visibleStartups.length === 0 && <p className="py-16 text-center text-slate-500 font-medium">No startups match that search yet.</p>}<div className="mt-16 text-center"><Link href="/startups" className="inline-block border border-slate-300 bg-white px-8 py-4 font-bold text-slate-700 transition hover:border-brand-primary hover:text-brand-primary hover:bg-slate-50 shadow-sm uppercase tracking-wider text-sm">View full startup directory &rarr;</Link></div>
-    </div></section>
 
-    <section id="units" className="py-24 bg-white border-t border-slate-200"><div className="container mx-auto max-w-7xl px-4 lg:px-8"><div className="mx-auto mb-16 max-w-2xl text-center"><div className="inline-flex justify-center items-center gap-2 mb-4"><div className="w-8 h-1 bg-brand-accent"></div><span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Support system</span></div><h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">One ecosystem, multiple engines</h2><p className="mt-6 text-lg text-slate-600 leading-relaxed">Specialised units that meet founders wherever their idea begins.</p></div><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">{units.map((unit) => <article key={unit.code} className={`group relative border border-slate-200 bg-white p-8 transition-all duration-200 hover:shadow-md border-t-4 ${unit.colorClass}`}><div className="text-sm font-black text-brand-accent mb-4 uppercase tracking-widest">{unit.code}</div><h3 className="text-xl font-bold text-slate-900 leading-tight">{unit.name}</h3><p className="mt-4 text-sm leading-relaxed text-slate-600">{unit.text}</p></article>)}</div></div></section>
+    <section id="units" className="py-24 bg-white border-t border-slate-200"><div className="container mx-auto max-w-7xl px-4 lg:px-8"><div className="mx-auto mb-16 max-w-2xl text-center"><div className="inline-flex justify-center items-center gap-2 mb-4"><div className="w-8 h-1 bg-brand-accent"></div><span className="uppercase tracking-[0.2em] text-brand-primary font-bold text-sm">Support system</span></div><h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">One ecosystem, multiple engines</h2><p className="mt-6 text-lg text-slate-600 leading-relaxed">Specialised units that meet founders wherever their idea begins.</p></div><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">{units.map((unit) => <article key={unit.code} className={`group relative border border-slate-200 bg-white p-8 transition-all duration-200 hover:shadow-md border-t-4 ${unit.colorClass}`}><div className="flex justify-between items-start mb-4"><div className="text-sm font-black text-brand-accent uppercase tracking-widest">{unit.code}</div>{unit.image ? <div className="w-16 h-16 bg-white flex items-center justify-center p-1"><img src={unit.image} alt={`${unit.code} Logo`} className="w-full h-full object-contain drop-shadow-sm" /></div> : <div className="w-10 h-10 rounded border-2 border-dashed border-slate-300 flex flex-col items-center justify-center cursor-pointer group-hover:border-brand-primary transition-colors" title={`Upload ${unit.code} Logo`}><span className="text-[7px] text-slate-400 group-hover:text-brand-primary font-bold">LOGO</span></div>}</div><h3 className="text-xl font-bold text-slate-900 leading-tight">{unit.name}</h3><p className="mt-4 text-sm leading-relaxed text-slate-600">{unit.text}</p></article>)}</div></div></section>
 
     <section id="network" className="bg-brand-primary py-24 text-white"><div className="container mx-auto max-w-7xl px-4 lg:px-8"><div className="grid items-center gap-16 lg:grid-cols-[1fr_1.35fr]"><div><div className="inline-flex items-center gap-2 mb-6"><div className="w-8 h-1 bg-brand-accent"></div><span className="uppercase tracking-[0.2em] text-white/80 font-bold text-sm">National network</span></div><h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Connected across India&apos;s innovation landscape.</h2><p className="mt-6 text-lg leading-relaxed text-white/80">I3F/R-ABI is part of a nationwide network of RKVY-RAFTAAR knowledge partners, agricultural universities and incubators.</p><div className="mt-10 flex items-center gap-6"><div className="text-5xl font-black text-brand-accent">25+</div><div className="text-sm text-white/70 max-w-[200px] leading-relaxed font-medium">associated incubators across IITs, agricultural universities and ICAR institutes</div></div></div><div className="grid grid-cols-2 gap-4">{partners.map((partner) => <div key={partner} className="flex min-h-24 items-end border border-white/20 bg-white/5 p-6 text-base font-bold text-white backdrop-blur-sm">{partner}</div>)}</div></div></div></section>
 
@@ -110,17 +57,18 @@ export default function PortfolioEcosystem() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Recognized Nationally</h2>
           <p className="mt-6 text-lg text-slate-600 leading-relaxed">Our incubated startups are consistently recognized across major national platforms for their innovative impact.</p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {awards.map((award, i) => (
-            <div key={i} className="flex flex-col justify-center p-6 bg-slate-50 border border-slate-200 hover:border-brand-primary transition-colors group">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            <div key={i} className="flex flex-col justify-center p-8 bg-white border border-slate-200 hover:border-brand-primary hover:shadow-xl transition-all duration-300 rounded-2xl group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brand-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+              <div className="flex items-start gap-5 relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-white group-hover:-translate-y-1 transition-all shadow-sm">
+                  {award.icon}
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 text-lg leading-tight mb-1">{award.company}</h3>
-                  <p className="text-sm font-bold text-brand-accent uppercase tracking-wider">{award.award}</p>
-                  <p className="text-xs text-slate-500 mt-2">{award.detail}</p>
+                  <h3 className="font-bold text-slate-900 text-lg leading-tight mb-2 group-hover:text-brand-primary transition-colors">{award.company}</h3>
+                  <p className="text-xs font-bold text-brand-accent uppercase tracking-wider mb-1">{award.award}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{award.detail}</p>
                 </div>
               </div>
             </div>
