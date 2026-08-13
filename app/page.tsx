@@ -37,7 +37,7 @@ export default function Home() {
     <div className="flex flex-col w-full bg-slate-50 font-sans">
       
       {/* HERO SECTION - Modern Government/Authority Style */}
-      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center bg-brand-primary overflow-hidden">
+      <section className="relative w-full h-[85vh] min-h-[600px] flex items-center bg-brand-dark overflow-hidden">
         {/* Real Photo Background */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -47,9 +47,9 @@ export default function Home() {
             className="object-cover mix-blend-luminosity opacity-40"
             priority 
           />
-          {/* Maroon Overlay to keep branding strong and text readable */}
-          <div className="absolute inset-0 bg-brand-primary/70"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/90 to-brand-primary/20"></div>
+          {/* Deep I3F plum overlay keeps the hero readable over the photo. */}
+          <div className="absolute inset-0 bg-brand-dark/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand-dark/20"></div>
         </div>
 
         {/* Abstract Geometric Background */}
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* UNIFIED STATS - Below Hero */}
-      <section className="relative z-20 bg-white border-b border-slate-200 py-12">
+      <section className="relative z-20 bg-white py-12">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center divide-x-0 lg:divide-x divide-slate-100">
             {[
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT I-3F (Interactive Tabs) */}
-      <section id="about" className="py-24 bg-slate-50">
+      <section id="about" className="py-24 bg-[#f5f0f4]">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
           <div className="mb-12">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -184,11 +184,11 @@ export default function Home() {
       <PortfolioEcosystem />
       
       {/* COMBINED CTA: PROGRAMS & FACILITIES */}
-      <section className="py-24 bg-white border-t border-slate-200">
+      <section className="py-24 bg-[#f5f0f4]">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Programs Card */}
-            <div className="bg-slate-50 rounded-2xl p-10 border border-slate-200 flex flex-col items-start justify-between">
+            <div className="bg-white rounded-2xl p-10 border border-slate-200 flex flex-col items-start justify-between">
               <div>
                 <div className="w-12 h-12 bg-brand-primary/10 text-brand-primary rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -204,7 +204,7 @@ export default function Home() {
             </div>
             
             {/* Facilities Card */}
-            <div className="bg-slate-50 rounded-2xl p-10 border border-slate-200 flex flex-col items-start justify-between">
+            <div className="bg-white rounded-2xl p-10 border border-slate-200 flex flex-col items-start justify-between">
               <div>
                 <div className="w-12 h-12 bg-brand-primary/10 text-brand-primary rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
