@@ -2,10 +2,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-brand-primary: #800000;
-  /* IIT BHU Maroon */
-  --color-brand-secondary: #660000;
-  /* Darker Maroon */
+  /* I3F logo palette: deep plum with lighter purple section treatments. */
+  --color-brand-primary: #680a54;
+  --color-brand-secondary: #52083f;
+  --color-brand-dark: #4f073f;
+  --color-brand-network: #7f1d68;
   --color-brand-accent: #fbbf24;
   /* BHU Official Saffron/Orange */
 
