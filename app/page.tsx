@@ -77,7 +77,7 @@ export default function Home() {
 
             {/* Massive Trustworthy Headline */}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight font-heading">
-              Ideation Innovation and Incubation Foundation
+              Ideation Innovation &amp; Incubation Foundation
             </h1>
 
             {/* Subtitle */}

@@ -17,7 +17,7 @@ const awards = [
 
 const units = [
   { code: "R-ABI", name: "RKVY-RAFTAAR Agri Business Incubator", text: "Operational since Jan 2019 under the Ministry of Agriculture & Farmers' Welfare's scheme, promoting agripreneurship through extensive financial support and incubation.", colorClass: "border-t-emerald-500", image: "/images/logos/rkvy_logo.png" },
-  { code: "JIC", name: "Joint Incubation Centre", text: "Established in 2023 with Union Bank of India. Enables innovation in software, quantum computing, cybersecurity, IoT, and data analytics with a focus on social impact and women entrepreneurs.", colorClass: "border-t-blue-500", image: "/images/logos/jic_logo.png" },
+  { code: "JIC", name: "Joint Incubation Centre", text: "Established in 2023 with Union Bank of India. Enables innovation in software, quantum computing, cybersecurity, IoT, and data analytics with a focus on social impact and women entrepreneurs.", colorClass: "border-t-blue-500", image: "/images/logos/jic-iit-bhu-logo.png" },
   { code: "CISCO", name: "Cisco thingQbator", text: "An AI/IoT-focused makerspace launched in 2018 via Cisco's CSR with NASSCOM Foundation. Runs hackathons, workshops, and internship tracks (Learning, Project, Startup).", colorClass: "border-t-violet-500", image: "/images/logos/cisco_logo.png" },
   { code: "E-CELL", name: "Entrepreneurship Cell", text: "A student-run Entrepreneurship Cell that actively builds entrepreneurial awareness on campus through specialized workshops, ideation sessions, and capacity-building programs.", colorClass: "border-t-brand-accent", image: "/images/logos/ecell_logo.webp" },
 ];

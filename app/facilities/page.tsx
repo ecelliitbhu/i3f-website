@@ -41,7 +41,7 @@ export default function FacilitiesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: "Collaborative Workspace", id: "workspace.jpg" },
-                { title: "Hardware & Electronics Lab", id: "hardware_lab.jpg" },
+                { title: "Hardware & Electronics Lab", id: "hardware_electronics_lab.png" },
                 { title: "Incubator Building", id: "bio_lab.jpg" },
               ].map((item, index) => (
                 <motion.div 

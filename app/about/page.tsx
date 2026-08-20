@@ -142,10 +142,10 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-8 md:gap-10">
             {[
               { name: "Prof. Amit Patra", role: "Director, IIT (BHU) Varanasi & Chairman, I3F", img: "/images/leadership/amit_patra.png" },
-              { name: "Prof. Vikas Kumar Dubey", role: "DORD & Member, Managing Committee", img: "/images/leadership/vikas_dubey.jpg" },
+              { name: "Shri Sumit Kumar Biswas", role: "Registrar, Indian Institute of Technology (BHU)", img: "/images/leadership/sumit_biswas.png" },
               { name: "Prof. Rajnesh Tyagi", role: "Registrar & Member, Managing Committee", img: "/images/leadership/rajnesh_tyagi.jpg" },
               { name: "Prof. R.S. Singh", role: "Coordinator, I-DAPT Hub & Member, Managing Committee", img: "/images/leadership/rs_singh.jpg" },
-              { name: "Prof. Rajesh Kumar Upadhyay", role: "Member, Managing Committee (Dept. of Chemical Eng.)", img: "/images/leadership/rajesh_upadhyay.jpg" },
+              { name: "Prof. Rajesh Kumar Upadhyay", role: "DORD & Member, Managing Committee (Dept. of Chemical Eng.)", img: "/images/leadership/rajesh_upadhyay.jpg" },
               { name: "Prof. Manoj Kumar Meshram", role: "Member, Managing Committee (Dept. of Electronics Eng.)", img: "/images/leadership/manoj_meshram.jpg" },
             ].map((leader, i) => (
               <div key={i} className="text-center group w-full sm:w-72">
