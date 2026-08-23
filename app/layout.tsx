@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ideation Innovation and Incubation Foundation",
+  title: "Ideation Innovation & Incubation Foundation",
   description: "End-to-end Start to Scale support to entrepreneurs at IIT (BHU) Varanasi.",
 };
 

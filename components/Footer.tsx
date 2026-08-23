@@ -64,7 +64,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-slate-200 mt-16 pt-8 text-sm text-center flex flex-col md:flex-row justify-between items-center text-slate-500">
-                    <p>© {new Date().getFullYear()} Ideation Innovation and Incubation Foundation. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Ideation Innovation &amp; Incubation Foundation. All rights reserved.</p>
                     <p className="mt-2 md:mt-0">Designed for Innovators</p>
                 </div>
             </div>

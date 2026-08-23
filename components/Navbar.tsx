@@ -16,7 +16,7 @@ export default function Navbar() {
             href="/"
             className="font-bold text-lg md:text-xl tracking-tight text-slate-900 dark:text-white ml-2"
           >
-            Ideation Innovation and Incubation Foundation
+            Ideation Innovation &amp; Incubation Foundation
           </Link>
         </div>
 
